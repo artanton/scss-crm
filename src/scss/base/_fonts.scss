@@ -1,0 +1,14 @@
+@use "../utils/variables" as var;
+
+$fonts: var.$font-weights;
+
+@each $key, $value in $fonts{
+    @font-face{
+        font-family: 'Monserrat';
+        src: url('../../fonts/Monserrat-#{$key}.woff2')format('woff2'),
+        url('../../fonts/Monserrat-#{$key}.woff2')format('woff2');
+        font-weight: $value;
+        font-style: normal;
+        font-display: swap;
+    }
+}
